@@ -59,12 +59,12 @@ class PDO_Proxy {
 	}
 	
 	private function CallMaster($name, $arguments)	{
-		FB::log('On Master '.$name);
+		//FB::log('On Master '.$name);
 		return call_user_func_array(array($this->master,$name), $arguments);
 	}
 
 	private function CallSlave($name, $arguments)	{
-		FB::log('On Slave '.$name);
+		//FB::log('On Slave '.$name);
 		return call_user_func_array(array($this->master,$name), $arguments);
 	}	
 	
