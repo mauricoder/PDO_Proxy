@@ -65,7 +65,7 @@ class PDO_Proxy {
 
 	private function CallSlave($name, $arguments)	{
 		//FB::log('On Slave '.$name);
-		return call_user_func_array(array($this->master,$name), $arguments);
+		return call_user_func_array(array($this->slave,$name), $arguments);
 	}	
 	
 }
